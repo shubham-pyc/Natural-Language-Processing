@@ -142,3 +142,20 @@ def process_content():
     except Exception as e:
         print(str(e))
 ```
+
+---
+## Lemmatizing
+This is same as as stemming but with lemmatizing it is used to group together inflected or variant forms of the same words.
+
+
+For example if better can be used in different parts of speech as an adjective or as an adverb.
+Like "lets make this cake better" names we want to enhance the taste of the enhance. "your dress looks better now as it has been ironed" as an adjective better is being used as good, in some sense
+```python
+    from nltk.stem import WordNetLemmatizer
+    lemmatizer = WordNetLemmatizer()
+
+    print(lemmatizer.lemmatize("better")) # prints better
+    print(lemmatizer.lemmatize("better", pos="a")) # prints good
+
+```
+
